@@ -137,6 +137,19 @@ body{
     width: 50%;
     transform: translateY(-100%);
 }
+.weather-details .humidity .info-humidity,
+.weather-details .wind .info-wind{
+    transform: translateY(-100%);
+}
+.weather-box .box .info-weather{
+    transform: translateY(-120%);
+}
+.container.active .weather-box .box .info-weather,
+.container.active .weather-details .humidity .info-humidity,
+.container.active .weather-details .wind .info-wind{
+    transform: translateY(0%);
+    transition: transform 1s ease;
+}
 .weather-details.active .humidity,
 .weather-details.active .wind{
     transform: translateY(0%);
@@ -177,4 +190,7 @@ body{
     font-size: 22px;
     font-weight: 500;
     margin-top: 12px;
+}
+.city{
+
 }

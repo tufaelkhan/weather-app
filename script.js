@@ -36,37 +36,42 @@ search.addEventListener("click", () => {
       } else {
         city.textContent = city;
         container.computedStyleMap.height = "555px";
+        container.classList.add("active");
         weatherBox.classList.add("active");
         weatherDetails.classList.add("active");
         notFound.classList.remove("active");
-      }
 
-      switch (json.weather[0].main) {
-        case "Clear":
-          image.src = "image/clearpic.png";
-          break;
-        case "Rain":
-          image.src = "image/rain.png";
-          break;
-        case "Snow":
-          image.src = "image/snow.png";
-          break;
-        case "Clouds":
-          image.src = "image/cloud.png";
-          break;
-        case "Mist":
-          image.src = "image/mist.jpg";
-          break;
-        case "Haze":
-          image.src = "image/haze.jpg";
-          break;
-        default:
-          image.src = "image/cloud.png";
-      }
+        setTimeout(() => {
+            container.classList.remove("active");
+        }, 2000)
 
-      temparature.innerHTML = `${parseInt(json.main.temp)} <span>^C</span>`;
-      description.innerHTML = `${json.weather[0].description}`;
-      humidity.innerHTML = `${json.main.humidity}%`;
-      wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+        switch (json.weather[0].main) {
+          case "Clear":
+            image.src = "image/clearpic.png";
+            break;
+          case "Rain":
+            image.src = "image/rain.png";
+            break;
+          case "Snow":
+            image.src = "image/snow.png";
+            break;
+          case "Clouds":
+            image.src = "image/cloud.png";
+            break;
+          case "Mist":
+            image.src = "image/mist.jpg";
+            break;
+          case "Haze":
+            image.src = "image/haze.jpg";
+            break;
+          default:
+            image.src = "image/cloud.png";
+        }
+
+        temparature.innerHTML = `${parseInt(json.main.temp)} <span>^C</span>`;
+        description.innerHTML = `${json.weather[0].description}`;
+        humidity.innerHTML = `${json.main.humidity}%`;
+        wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+      }
     });
 });
