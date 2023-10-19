@@ -17,7 +17,17 @@ search.addEventListener('click', () => {
 
     switch (json.weather[0].main){
         case 'Clear':
-            image.src = 'image/clear.avif'
+            image.src = 'image/clearpic.png';
+            break;
+        case 'Rain':
+            image.src = 'image/rain.png';
+            break;
+        case 'Snow':
+            image.src = 'image/snow.png';
+            break;
+        case 'Clouds':
+            image.src = 'image/cloud.png';
+            break;
     }
     })
 })
