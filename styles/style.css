@@ -11,14 +11,18 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: seagreen;
+    background: url(https://cdn.pixabay.com/photo/2021/06/29/06/14/water-drops-6373296_640.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .container{
     position: relative;
     width: 400px;
     height: 555px;
-    background: purple;
+    background: rgba(255, 255, 255, -1);
+    backdrop-filter: blur(30px);
+    border: rgba(255, 255, 255, -2);
     border-radius: 16px;
     padding: 20px;
     color: #fff;
@@ -108,10 +112,22 @@ body{
     align-items: center;
     width: 50%;
 }
+.weather-details .humidiity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+
+}
 .weather-details i{
     font-size: 56px;
     margin-right: 10px;
 }
 .weather-details span{
-    
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
 }
+
