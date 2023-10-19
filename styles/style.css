@@ -79,9 +79,9 @@ body{
 }
 
 .weather-box,
-.weather-details{
+.weather-details,
+.not-found{
     visibility: hidden;
-
 }
 .weather-box img{
     width: 60%;
@@ -137,3 +137,19 @@ body{
     font-weight: 500;
 }
 
+.not-found{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 110px;
+}
+.not-found img{
+    width: 65%;
+}
+.not-found p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
