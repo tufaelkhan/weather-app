@@ -89,6 +89,15 @@ body{
 .not-found.active{
     visibility: visible;
 }
+
+.weather-box .box,
+.not-found .box{
+    transform: translate(-100%);
+}
+.weather-box.active .box,
+.not-found.active .box{
+    transform: translate(0%);
+}
 .weather-box img{
     width: 60%;
 }
