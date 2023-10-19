@@ -3,6 +3,7 @@ const search = document.querySelector(".search-box button");
 const weatherBox = document.querySelector(".weather-box");
 const weatherDetails = document.querySelector(".weather-details");
 const notFound = document.querySelector(".not-found");
+const city = document.querySelector(".city-hide");
 
 search.addEventListener("click", () => {
   const APIKey = "145200e04488b30e843840ec465b5d40";
@@ -14,25 +15,31 @@ search.addEventListener("click", () => {
   )
     .then((response) => response.json())
     .then((json) => {
-        
       if (json.cod == "404") {
+        city.textContent = city;
         container.computedStyleMap.height = "400px";
         weatherBox.classList.remove("active");
         weatherDetails.classList.remove("active");
         notFound.classList.add("active");
       }
 
-      container.computedStyleMap.height = "555px";
-      weatherBox.classList.add("active");
-      weatherDetails.classList.add("active");
-      notFound.classList.remove("active");
-
       const image = document.querySelector(".weather-box img");
       const temparature = document.querySelector(".weather-box .temparature");
       const description = document.querySelector(".weather-box .description");
       const humidity = document.querySelector(
-        ".weather-details .humidity span");
+        ".weather-details .humidity span"
+      );
       const wind = document.querySelector(".weather-details .wind span");
+
+      if (city.textContent == city) {
+        return;
+      } else {
+        city.textContent = city;
+        container.computedStyleMap.height = "555px";
+        weatherBox.classList.add("active");
+        weatherDetails.classList.add("active");
+        notFound.classList.remove("active");
+      }
 
       switch (json.weather[0].main) {
         case "Clear":
