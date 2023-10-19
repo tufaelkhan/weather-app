@@ -28,6 +28,14 @@ search.addEventListener('click', () => {
         case 'Clouds':
             image.src = 'image/cloud.png';
             break;
+        case 'Mist':
+            image.src = 'image/mist.jpg';
+            break;
+        case 'Haze':
+            image.src = 'image/haze.jpg';
+            break;
+        default:
+            image.src = "image/cloud.png";
     }
     })
 })
