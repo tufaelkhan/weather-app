@@ -21,6 +21,7 @@ body{
     background: purple;
     border-radius: 16px;
     padding: 20px;
+    color: #fff;
 }
 
 .search-box{
@@ -65,4 +66,13 @@ body{
     color: #fff;
     padding: 0 40px 0 5px;
     cursor: pointer;
+}
+
+.weather-box{
+    text-align: center;
+    margin: 40px 0 ;
+}
+.weather-box img{
+    width: 60%;
+
 }
