@@ -83,6 +83,11 @@ body{
 .not-found{
     visibility: hidden;
 }
+.weather-box.active,
+.weather-details.active,
+.not-found.active{
+    visibility: visible;
+}
 .weather-box img{
     width: 60%;
 }
@@ -112,13 +117,13 @@ body{
     padding: 0 20px;
     display: flex;
 }
-.weather-details .humidiity,
+.weather-details .humidity,
 .weather-details .wind{
     display: flex;
     align-items: center;
     width: 50%;
 }
-.weather-details .humidiity{
+.weather-details .humidity{
     padding-left: 20px;
     justify-content: flex-start;
 }
