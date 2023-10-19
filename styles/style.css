@@ -26,6 +26,7 @@ body{
     border-radius: 16px;
     padding: 20px;
     color: #fff;
+    transition: height .6s ease;
 }
 
 .search-box{

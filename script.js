@@ -14,6 +14,7 @@ search.addEventListener("click", () => {
   )
     .then((response) => response.json())
     .then((json) => {
+        
       if (json.cod == "404") {
         container.computedStyleMap.height = "400px";
         weatherBox.classList.remove("active");
