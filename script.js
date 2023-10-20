@@ -90,6 +90,31 @@ search.addEventListener("click", () => {
         elCloneInfoWind.id = 'clone-info-wind';
         elCloneInfoWind.classList.add('active-clone')
 
+        setTimeout(()=>{
+          infoWeather.insertAdjacentElement('afterend', elCloneInfoWeather);
+          infoHumidity.insertAdjacentElement('afterend', elCloneInfoHumidity);
+          infoWind.insertAdjacentElement('afterend', elCloneInfoWind);
+        }, 2000)
+
+        const cloneInfoWeather = document.querySelector('.info-weather.active-clone')
+        const totalCloneInfoWeather = cloneInfoWeather.length;
+        const cloneInfoWeatherFirst = cloneInfoWeather[0]
+
+        const cloneInfoHumidity = document.querySelector('.info-humidity.active-clone')
+        const cloneInfoHumidityFirst = cloneInfoHumidity[0]
+
+        const cloneInfoWind = document.querySelector('.info-wind.active-clone')
+        const cloneInfoWindFirst = cloneInfoWind[0]
+
+        if(totalCloneInfoWeather > 0){
+          cloneInfoWeatherFirst.classList.remove('active-clone')
+          cloneInfoHumidityFirst.classList.remove('active-clone')
+          cloneInfoWindFirst.classList.remove('active-clone')
+
+          setTimeout(()=>{
+            
+          })
+        }
       }
     });
 });
