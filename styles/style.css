@@ -192,5 +192,7 @@ body{
     margin-top: 12px;
 }
 .city{
-
+    display: none;
 }
+
+

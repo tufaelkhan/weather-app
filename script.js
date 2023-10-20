@@ -112,8 +112,10 @@ search.addEventListener("click", () => {
           cloneInfoWindFirst.classList.remove('active-clone')
 
           setTimeout(()=>{
-            
-          })
+            cloneInfoWeatherFirst.remove();
+            cloneInfoHumidityFirst.remove();
+            cloneInfoWindFirst.remove();
+          }, 2000)
         }
       }
     });
